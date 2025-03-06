@@ -1,7 +1,6 @@
-//Main.java
 import java.util.Scanner;
 
-public class ShapeCalculator {
+class ShapeCalculator {  // Remove 'public' modifier
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -19,69 +18,66 @@ public class ShapeCalculator {
             choice = scanner.nextInt();
 
             switch (choice) {
-                case 1: // Circle
-                    System.out.print("Enter radius: ");
+                case 1:
+                    System.out.print("Enter radius of the Circle: ");
                     double radius = scanner.nextDouble();
                     Circle circle = new Circle(radius);
                     circle.calculateArea();
                     circle.calculatePerimeter();
                     break;
 
-                case 2: // Rectangle
-                    System.out.print("Enter length: ");
+                case 2:
+                    System.out.print("Enter length of the Rectangle: ");
                     double length = scanner.nextDouble();
-                    System.out.print("Enter width: ");
+                    System.out.print("Enter width of the Rectangle: ");
                     double width = scanner.nextDouble();
                     Rectangle rectangle = new Rectangle(length, width);
                     rectangle.calculateArea();
                     rectangle.calculatePerimeter();
                     break;
 
-                case 3: // Square
-                    System.out.print("Enter side length: ");
+                case 3:
+                    System.out.print("Enter side length of the Square: ");
                     double side = scanner.nextDouble();
                     Square square = new Square(side);
                     square.calculateArea();
                     square.calculatePerimeter();
                     break;
 
-                case 4: // Sphere
-                    System.out.print("Enter radius: ");
+                case 4:
+                    System.out.print("Enter radius of the Sphere: ");
                     double sphereRadius = scanner.nextDouble();
                     Sphere sphere = new Sphere(sphereRadius);
                     sphere.calculateArea();
-                    sphere.calculatePerimeter();
                     sphere.calculateVolume();
                     break;
 
-                case 5: // Cylinder
-                    System.out.print("Enter radius: ");
+                case 5:
+                    System.out.print("Enter radius of the Cylinder: ");
                     double cylRadius = scanner.nextDouble();
-                    System.out.print("Enter height: ");
+                    System.out.print("Enter height of the Cylinder: ");
                     double cylHeight = scanner.nextDouble();
                     Cylinder cylinder = new Cylinder(cylRadius, cylHeight);
                     cylinder.calculateArea();
-                    cylinder.calculatePerimeter();
                     cylinder.calculateVolume();
                     break;
 
-                case 6: // Equilateral Pyramid
-                    System.out.print("Enter base side length: ");
-                    double baseSide = scanner.nextDouble();
-                    System.out.print("Enter height: ");
+                case 6:
+                    System.out.print("Enter base length of the Equilateral Pyramid: ");
+                    double baseLength = scanner.nextDouble();
+                    System.out.print("Enter height of the Equilateral Pyramid: ");
                     double pyramidHeight = scanner.nextDouble();
-                    EquilateralPyramid pyramid = new EquilateralPyramid(baseSide, pyramidHeight);
+                    EquilateralPyramid pyramid = new EquilateralPyramid(baseLength, pyramidHeight);
                     pyramid.calculateArea();
-                    pyramid.calculatePerimeter();
                     pyramid.calculateVolume();
                     break;
 
-                case 7: // Exit
-                    System.out.println("Exiting the program...");
+                case 7:
+                    System.out.println("Exiting...");
                     break;
 
                 default:
-                    System.out.println("Invalid choice! Please enter a number between 1 and 7.");
+                    System.out.println("Invalid choice! Please try again.");
             }
         } while (choice != 7);
 
