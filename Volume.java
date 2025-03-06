@@ -1,2 +1,5 @@
-public interface Volume {
+// Volume.java
+interface Volume
+{
+    void calculateVolume(); 
 }
